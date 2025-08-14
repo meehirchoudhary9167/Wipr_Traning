@@ -1,0 +1,10 @@
+<students>
+    <student>
+        <name>Aryan</name>
+        <age>22</age>
+    </student>
+    <student>
+        <name>Kat</name>
+        <age>21</age>
+    </student>
+</students>
