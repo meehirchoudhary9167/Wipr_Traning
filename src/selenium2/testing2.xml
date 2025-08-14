@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="GoogleSuite">
+  
+  <!-- Parameters for all tests -->
+  <parameter name="browserName" value="Chrome"/>
+  <parameter name="url" value="https://www.google.com"/>
+
+  <!-- Smoke tests -->
+  <test thread-count="3" name="SmokeTests">
+    <groups>
+      <define name="one time run">
+        <include name="smoke"/>
+      </define>
+    </groups>
+    <classes>
+      <class name="Day22.GoogleSearchTest"/>
+    </classes>
+  </test>
+
+  <!-- Regression tests -->
+  <test thread-count="2" name="RegressionTests" enabled="false">
+    <groups>
+      <define name="full run">
+        <include name="regression"/>
+      </define>
+    </groups>
+    <classes>
+      <class name="Day22.GoogleSearchTest"/>
+    </classes>
+  </test>
+
+</suite>
